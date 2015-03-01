@@ -1,12 +1,12 @@
 # Site settings
-title: Your awesome title
+title: 枯藤老树昏鸦 小桥流水人家
 email: withliyh@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
     科技让生活更美好
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "https://withliyh.github.io" # the base hostname & protocol for your site
-twitter_username: jekyllrb
-github_username:  jekyll
+#twitter_username: jekyllrb
+github_username:  withliyh
 
 # Build settings
 markdown: kramdown

@@ -2,7 +2,7 @@
 layout: post
 title:  "Linux 开发环境和 Mac 一样好用"
 date:   2015-03-01 14:34:57
-categories: 优雅的开发环境
+tags: 优雅的开发环境
 ---
 You’ll find this post in your `_posts` directory. Go ahead and edit it and re-build the site to see your changes. You can rebuild the site in many different ways, but the most common way is to run `jekyll serve --watch`, which launches a web server and auto-regenerates your site when a file is updated.
 
