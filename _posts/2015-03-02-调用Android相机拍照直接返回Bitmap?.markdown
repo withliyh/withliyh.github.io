@@ -5,7 +5,7 @@ date:   2015-03-02 18:10:00
 categories: jekyll update
 ---
 
-{% highlight java%}
+{% highlight java %}
 private void doAttach() {
         if (mPaused) {
             return;
