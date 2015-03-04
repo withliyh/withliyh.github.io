@@ -15,9 +15,11 @@ tags: 优雅的开发环境
 >    
 >内存: [海盗船(CORSAIR)复仇者 DDR3 1600 4GB * 2 台式机内存][MEM]
 >   
->硬盘：2T + 250G SSD
+>硬盘：2T
 >   
 >显卡：[MSI R6850][VGA]
+
+一个稳定而完美的Gentoo系统
 
 
 [P67]:         http://www.asus.com.cn/Motherboards/SABERTOOTH_P67/
