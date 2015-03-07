@@ -125,7 +125,6 @@ blockquote {
 /**
  * Code formatting
  */
-/*
 pre,
 code {
     font-size: 15px;
@@ -148,7 +147,7 @@ pre {
         padding-left: 0;
     }
 }
-*/
+
 
 
 /**

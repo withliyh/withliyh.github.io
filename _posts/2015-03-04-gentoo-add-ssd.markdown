@@ -5,8 +5,7 @@ date:   2015-03-04 23:16:02
 ---
 #**写在前面**
 
-一直对 SSD 的性能垂涎三尺，加上老 HDD 读起数据来咔咔响让人烦躁，终于一咬牙
-啃了一个月的馒头入了`三星850 EVO 250G`。货一到就迫不及待的把 `Gentoo` 转移到 SSD 上
+	一直对 SSD 的性能垂涎三尺，加上老 HDD 读起数据来咔咔响让人烦躁，终于一咬牙啃了一个月的馒头入了`三星850 EVO 250G`。货一到就迫不及待的把 `Gentoo` 转移到 SSD 上
 
 #**对 SSD 进行分区**
 
@@ -166,4 +165,4 @@ XDG_CACHE_HOME=”/tmp/.cache”
 换成 SSD 后的开机时间太让人惊叹了！
 ![boot][bootplot]
 
-[bootplot]:     /public/img/bootplot.svg
+[bootplot]:     /assets/img/bootplot.svg

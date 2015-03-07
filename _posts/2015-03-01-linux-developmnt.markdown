@@ -7,7 +7,7 @@ tags: 优雅的开发环境
 
    ![P67][P67IMG]
 
-###我的台式机配置是
+#硬件配置
 >
 >主板：[SABERTOOTH_P67][P67]
 >    
@@ -19,7 +19,20 @@ tags: 优雅的开发环境
 >   
 >显卡：[MSI R6850][VGA]
 
-一个稳定而完美的Gentoo系统
+一个稳定而完美的 `Gentoo` 系统
+
+#工作环境
+
+##桌面环境
+Gnome 3.12
+
+##
+
+
+Eclipse
+Vim
+Gedit
+
 
 
 [P67]:         http://www.asus.com.cn/Motherboards/SABERTOOTH_P67/
@@ -28,3 +41,4 @@ tags: 优雅的开发环境
 [P67IMG]:      http://www.asus.com.cn/websites/global/products/ZYgjt71bzlh62Zk9/product_overview.jpg
 [MEM]:         http://item.jd.com/615822.html#none
 [VGA]:         http://www.chiphell.com/article-756-1.html 
+

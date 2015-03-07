@@ -9,6 +9,14 @@ permalink: /blog/:title
 #twitter_username: jekyllrb
 github_username:  withliyh
 
+markdown: kramdown
+kramdown:
+    input: GFM
+
 # Build settings
-markdown: redcarpet
+#highlighter: pygments
+#markdown: redcarpet
 excerpt_separator: ""
+#redcarpet:
+#    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
+
