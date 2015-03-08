@@ -17,6 +17,6 @@ github_username:  withliyh
 #highlighter: pygments
 markdown: redcarpet
 excerpt_separator: ""
-redcarpet:
-    extensions: ["tables", "strikethrough"]
+#redcarpet:
+#    extensions: ["fenced_code_blocks", "tables", "highlight", "strikethrough"]
 

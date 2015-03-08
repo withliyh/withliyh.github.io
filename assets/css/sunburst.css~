@@ -18,8 +18,8 @@ pre .dec, code .dec { color: #3387CC; } /* decimal - blue */
 code {
 	color: #FFFFFF;
 	background-color: #2B2B2B;
-	padding-left: 8px;
-	padding-right: 8px;
+	padding-left: 4px;
+	padding-right: 4px;
 	text-align:center;
 	-moz-border-radius: 4px;
 	-webkit-border-radius: 4px;
