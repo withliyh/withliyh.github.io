@@ -75,6 +75,11 @@ Gnome 3.12
 
 虚拟机: Boxes
 
+取色器: gcolor2
+
+翻译工具: openyoudao
+
+输入法: fcitx sogoupinyin
 
 
 [P67]:         http://www.asus.com.cn/Motherboards/SABERTOOTH_P67/
