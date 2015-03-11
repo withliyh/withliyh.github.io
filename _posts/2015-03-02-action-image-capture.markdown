@@ -1,4 +1,4 @@
----
+--
 layout: post
 title:  "调用Android相机拍照直接返回Bitmap?"
 date:   2015-03-02 18:10:00

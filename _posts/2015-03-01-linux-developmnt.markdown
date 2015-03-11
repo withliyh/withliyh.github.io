@@ -5,6 +5,54 @@ date:   2015-03-01 14:34:57
 tags: 优雅的开发环境
 ---
 
+## 我们的目标是
+
+> 一个稳定而完美的 `Gentoo` 系统
+
+## 明确需求
+
+<table border=”1”>
+    <tr>
+        <th>需要</th>
+        <th>不需要</th>
+    </tr>
+    <tr>
+        <td>经常长期运行</td>
+        <td>不待机或偶尔待机</td>
+    </tr>
+    <tr>
+        <td>使用 vpn</td>
+        <td>不用 ipv6</td>
+    </tr>
+    <tr>
+        <td>使用虚拟机</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>偶尔听音乐看电影</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>整洁清新的图形界面</td>
+        :close
+    </td>
+    <tr>
+        <td>SSH 远程登录</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Anddoid 开发</td>
+        <td></td>
+    </tr>
+    <td>
+        <tr>NFS 服务</tr>
+        <tr></tr>
+    </td>
+    <td>
+        <tr>NTFS, VFAT文件系统访问</tr>
+        <tr></tr>
+    </td>
+</table>
    ![P67][P67IMG]
 
 # 硬件配置
@@ -19,11 +67,15 @@ tags: 优雅的开发环境
 >   
 > 显卡：[MSI R6850 Hawk][VGA]
 
-一个稳定而完美的 `Gentoo` 系统
 
 # 内核配置
+|需要|不需要|
+我需要使用 `pptp` 协议连接 `vpn`
+我不需要使用 ipv6
+首先完美驱动所有硬件
 
-首先把硬件驱动起来
+使用 `lspci` 查看硬件信息
+
 
 ```
 00:00.0 Host bridge: Intel Corporation Xeon E3-1200 v2/Ivy Bridge DRAM Controller (rev 09)
@@ -88,4 +140,4 @@ Gnome 3.12
 [P67IMG]:      http://www.asus.com.cn/websites/global/products/ZYgjt71bzlh62Zk9/product_overview.jpg
 [MEM]:         http://item.jd.com/615822.html#none
 [VGA]:         http://www.chiphell.com/article-756-1.html 
-
+,
