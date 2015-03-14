@@ -164,4 +164,4 @@ Gnome 3.12
 [P67IMG]:      http://www.asus.com.cn/websites/global/products/ZYgjt71bzlh62Zk9/product_overview.jpg
 [MEM]:         http://item.jd.com/615822.html#none
 [VGA]:         http://www.chiphell.com/article-756-1.html 
-[KERNEL]:      /assets/config/.config
+[KERNEL]:      /assets/data/config

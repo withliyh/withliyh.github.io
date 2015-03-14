@@ -40,7 +40,7 @@ sdb                      232.9G
 #**转移系统文件**
 
 首先把原系统备份，使用脚本打包成一个`tar.gz`包
-接着还原这个包到新分区上,网上搜到一个针对 `gentoo` 备份的脚本，修改下增加自己的排除目录，效果很好
+接着还原这个包到新分区上,网上搜到一个针对 `gentoo` 备份的[脚本][MKSTAGE]，修改下增加自己的排除目录，效果很好
 
 
 脚本最终生成的核心备份命令如下：
@@ -166,3 +166,4 @@ XDG_CACHE_HOME=”/tmp/.cache”
 ![boot][bootplot]
 
 [bootplot]:     /assets/img/bootplot.svg
+[MKSTAGE]: /assets/data/mkstage4.sh
