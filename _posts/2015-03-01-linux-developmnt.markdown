@@ -11,6 +11,14 @@ tags: 优雅的开发环境
 
 ## 明确需求
 
+首先要保持系统的整洁，不能有多余的包，其次要满足需求，需要用到的软件要能信手拈来。
+
+声卡、显卡要能正常驱动，同时保持内核尽量短小，不用的功能不编译进内核，不常用的功能编译为模块
+
+在这个前提下，桌面要漂亮，操作简单，有良好的交互。
+
+在使用过程中也会遇到不适应或不顺心的地方，需要慢慢调整，同时记录在案，最终达到我们的目标：一个完美而稳定的 Gentoo 系统。
+
 <table border=”1”>
     <tr>
         <th>需要</th>
@@ -34,7 +42,7 @@ tags: 优雅的开发环境
     </tr>
     <tr>
         <td>整洁清新的图形界面</td>
-        :close
+        <td></td>
     </td>
     <tr>
         <td>SSH 远程登录</td>
@@ -45,7 +53,7 @@ tags: 优雅的开发环境
         <td></td>
     </tr>
     <td>
-        <tr>NFS 服务</tr>
+        <tr>可能会用到NFS 服务</tr>
         <tr></tr>
     </td>
     <td>
@@ -53,7 +61,16 @@ tags: 优雅的开发环境
         <tr></tr>
     </td>
 </table>
-   ![P67][P67IMG]
+
+
+
+## 定制系统
+
+这是 12 年的配置，现在有更好的硬件，但还不算过时，在升级到 128G 的 SSD 后，更是焕发了第二春
+
+
+
+
 
 # 硬件配置
 >
@@ -68,47 +85,54 @@ tags: 优雅的开发环境
 > 显卡：[MSI R6850 Hawk][VGA]
 
 
+   ![P67][P67IMG]
+
 # 内核配置
-|需要|不需要|
-我需要使用 `pptp` 协议连接 `vpn`
-我不需要使用 ipv6
-首先完美驱动所有硬件
 
-使用 `lspci` 查看硬件信息
+每个人需求不同，只记录几处重要的地方
+
+> 内核博大精深，不懂的地方太多，以下只是多次尝试后，现在比较好用的配置
+>>>
+    File systems --->
+        <M> FUSE (Filesystem in Userspace) support
+        DOS/FAT/NT --->
+            <*> MSDOS fs support
+            <*> VFAT (Window-95) for FAT
+            (936) Default codepage for FAT
+            (utf8) Default iocharset for FAT
+            <*> NTFS file system support
+            [ ] NTFS debugging support
+            [*] NTFS write support
+        Native language support --->
+            (utf8) Default NLS Option
+            <*> Simplified Chinese charset (CP936, GB2312)
+            <*> ASCII (United States)
+            <*> NLS ISO 8859-1 (Latin 1; Western European Languages)
+            <*> NLS UTF-8
+    Virtualization --->
+        <M> Kernel-based Virutal Machine (KVM) support
+        <M> KVM for Intel processors support
+        <M> Host kernel accelerator for virtio net
+    Device Drivers --->
+        Graphics support --->
+        <M> /dev/agpgart (AGP Support) --->
+            <M>Intel 440LX/BX/GX, I8xx and E7x05 chipset support
+        Direct Rendering Manager  --->
+            < > Direct Rendering Manager (XFree86 4.1.0 and higher DRI support)
+        Frame buffer Devices --->
+            < > Support for frame buffer devices  ----
+        Generic Driver Options --->
+            [*] Support for uevent helper
+            [*]   Include in-kernel firmware blobs in kernel binary
+            (radeon/BTC_rlc.bin radeon/BARTS_mc.bin radeon/BARTS_me.bin radeon/BARTS_pfp.bin radeon/BARTS_smc.bin radeon/SUMO_uvd.bin)
+            (/lib/firmware) Firmware blobs root directory
+>>>
+
+附上完整的[内核配置文件][KERNEL]
 
 
-```
-00:00.0 Host bridge: Intel Corporation Xeon E3-1200 v2/Ivy Bridge DRAM Controller (rev 09)
-00:01.0 PCI bridge: Intel Corporation Xeon E3-1200 v2/3rd Gen Core processor PCI Express Root Port (rev 09)
-00:16.0 Communication controller: Intel Corporation 6 Series/C200 Series Chipset Family MEI Controller #1 (rev 04)
-00:19.0 Ethernet controller: Intel Corporation 82579V Gigabit Network Connection (rev 05)
-00:1a.0 USB controller: Intel Corporation 6 Series/C200 Series Chipset Family USB Enhanced Host Controller #2 (rev 05)
-00:1b.0 Audio device: Intel Corporation 6 Series/C200 Series Chipset Family High Definition Audio Controller (rev 05)
-00:1c.0 PCI bridge: Intel Corporation 6 Series/C200 Series Chipset Family PCI Express Root Port 1 (rev b5)
-00:1c.1 PCI bridge: Intel Corporation 6 Series/C200 Series Chipset Family PCI Express Root Port 2 (rev b5)
-00:1c.2 PCI bridge: Intel Corporation 6 Series/C200 Series Chipset Family PCI Express Root Port 3 (rev b5)
-00:1c.3 PCI bridge: Intel Corporation 6 Series/C200 Series Chipset Family PCI Express Root Port 4 (rev b5)
-00:1c.4 PCI bridge: Intel Corporation 6 Series/C200 Series Chipset Family PCI Express Root Port 5 (rev b5)
-00:1c.6 PCI bridge: Intel Corporation 82801 PCI Bridge (rev b5)
-00:1c.7 PCI bridge: Intel Corporation 6 Series/C200 Series Chipset Family PCI Express Root Port 8 (rev b5)
-00:1d.0 USB controller: Intel Corporation 6 Series/C200 Series Chipset Family USB Enhanced Host Controller #1 (rev 05)
-00:1f.0 ISA bridge: Intel Corporation P67 Express Chipset Family LPC Controller (rev 05)
-00:1f.2 SATA controller: Intel Corporation 6 Series/C200 Series Chipset Family SATA AHCI Controller (rev 05)
-00:1f.3 SMBus: Intel Corporation 6 Series/C200 Series Chipset Family SMBus Controller (rev 05)
-01:00.0 VGA compatible controller: Advanced Micro Devices, Inc. [AMD/ATI] Barts PRO [Radeon HD 6850]
-01:00.1 Audio device: Advanced Micro Devices, Inc. [AMD/ATI] Barts HDMI Audio [Radeon HD 6800 Series]
-03:00.0 USB controller: NEC Corporation uPD720200 USB 3.0 Host Controller (rev 04)
-05:00.0 SATA controller: JMicron Technology Corp. JMB362 SATA Controller (rev 10)
-06:00.0 USB controller: NEC Corporation uPD720200 USB 3.0 Host Controller (rev 04)
-07:00.0 PCI bridge: ASMedia Technology Inc. ASM1083/1085 PCIe to PCI Bridge (rev 01)
-08:01.0 FireWire (IEEE 1394): VIA Technologies, Inc. VT6306/7/8 [Fire II(M)] IEEE 1394 OHCI Controller (rev c0)
-09:00.0 SATA controller: Marvell Technology Group Ltd. 88SE9172 SATA 6Gb/s Controller (rev 11)
 
-```
-
-
-
-# 桌面环境
+## 桌面环境
 
 首先说一下
 Gnome 3.12
@@ -140,4 +164,4 @@ Gnome 3.12
 [P67IMG]:      http://www.asus.com.cn/websites/global/products/ZYgjt71bzlh62Zk9/product_overview.jpg
 [MEM]:         http://item.jd.com/615822.html#none
 [VGA]:         http://www.chiphell.com/article-756-1.html 
-,
+[KERNEL]:      /assets/config/.config
