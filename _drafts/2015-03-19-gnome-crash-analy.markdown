@@ -95,6 +95,33 @@ COGL 的目标是提供给开发者高性能访问现代图形硬件能力，提
 
 clutter 是一个使用 opengl 进行渲染的绘图工具包，提供易用、高效、灵活的 API，
 
+
+
+export LD_PRELOAD=/usr/lib64/opengl/ati/lib/libGL.so
+
+设置下 LDPRELOAD 环境变量，Gnome 就可以正常启动了
+
+
+
+搜了下系统中 libGL 的实现发现有两个
+
+```
+cd /usr
+find . -name libGL.so
+./usr/lib64/libGL.so
+./usr/lib64/opengl/xorg-x11/lib/libGL.so
+./usr/lib64/opengl/ati/lib/libGL.so
+./usr/lib32/libGL.so
+./usr/lib32/opengl/xorg-x11/lib/libGL.so
+./usr/lib32/opengl/ati/lib/libGL.so
+```
+
+其中 `/usr/lib64/libGL.so` 是一个软链接，指向另外两个之一
+
+使用 `eselect opengl list` 可以看到有两个选项，设置选用不同的项就是更改上面这个软链接的引用
+
+
+
 [CLUTTER]: https://wiki.gnome.org/Projects/Clutter?action=AttachFile&do=get&target=clutter-logo-simple.png
 [COGL]:http://www.cogl3d.org/hello.html
 [CLUTTERHOME]: https://wiki.gnome.org/Projects/Clutter
