@@ -20,3 +20,7 @@ excerpt_separator: ""
 redcarpet:
     extensions: ["tables", "strikethrough"]
 
+comments:
+    provider : duoshuo
+    duoshuo :
+        short_name : withliyh
