@@ -141,21 +141,21 @@ Gnome 3.12
 
 开发工具: `Eclipse` 和 `Android Studio`
 
-截图工具: gnome-screenshot
+截图工具: `gnome-screenshot`
 
-文本编辑器: sublime 2 gedit vim
+文本编辑器: `sublime 2`, `gedit vim`
 
-图片浏览器: EyeOfGnome(EOG, gnome 默认图片浏览器)
+图片浏览器: `EyeOfGnome`(EOG, gnome 默认图片浏览器)
 
-网络浏览器: Chrome Firefox
+网络浏览器: `Chrome` 和 `Firefox`
 
-虚拟机: Boxes
+虚拟机: `Boxes`
 
-取色器: gcolor2
+取色器: `gcolor2`	
 
-翻译工具: openyoudao
+翻译工具: `openyoudao`
 
-输入法: fcitx sogoupinyin
+输入法: `fcitx sogoupinyin`
 
 
 [P67]:         http://www.asus.com.cn/Motherboards/SABERTOOTH_P67/
